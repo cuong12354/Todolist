@@ -1,0 +1,11 @@
+﻿@model TodoListApp.Models.Todo
+
+<h2>Bạn có chắc muốn xóa?</h2>
+
+<p>@Model.TenCongViec</p>
+
+<form method="post" action="/Todo/DeleteConfirmed/@Model.Id">
+    <button type="submit">Xóa</button>
+</form>
+
+<a href="/Todo/Index">Quay lại</a>

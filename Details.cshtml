@@ -1,0 +1,10 @@
+﻿@model TodoListApp.Models.Todo
+
+<h2>Chi tiết công việc</h2>
+
+<p><b>Mã:</b> @Model.Id</p>
+<p><b>Tên:</b> @Model.TenCongViec</p>
+<p><b>Trạng thái:</b> @(Model.TrangThai ? "Đã hoàn thành" : "Chưa hoàn thành")</p>
+<p><b>Ngày tạo:</b> @Model.NgayTao</p>
+
+<a href="/Todo/Index">Quay lại</a>

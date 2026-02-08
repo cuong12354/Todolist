@@ -1,0 +1,30 @@
+﻿@model List<TodoListApp.Models.Todo>
+
+<h2>DANH SÁCH CÔNG VIỆC</h2>
+
+<a href="/Todo/Create">➕ Tạo mới công việc</a>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Mã</th>
+        <th>Tên công việc</th>
+        <th>Trạng thái hoàn thành</th>
+      
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.TenCongViec</td>
+            <td>
+                <input type="checkbox" @(item.TrangThai ? "checked" : "") disabled />
+            </td>
+            <td>
+                <a href="/Todo/Edit/@item.Id">Sửa</a> |
+                <a href="/Todo/Details/@item.Id">Chi tiết</a> |
+                <a href="/Todo/Delete/@item.Id">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

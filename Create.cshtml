@@ -1,0 +1,19 @@
+﻿@model TodoListApp.Models.Todo
+
+<h2>Thêm công việc</h2>
+
+<form method="post">
+    Tên công việc:
+    <input type="text" name="TenCongViec" required />
+
+    <br><br>
+
+    Hoàn thành?
+    <input type="checkbox" name="TrangThai" />
+
+    <br><br>
+
+    <button type="submit">Lưu</button>
+</form>
+
+<a href="/Todo/Index">Quay lại</a>
